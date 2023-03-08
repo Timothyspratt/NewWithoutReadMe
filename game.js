@@ -101,6 +101,23 @@ noBird.addEventListener('click', () => {
     }
 })
 
+const devil = document.querySelector('.devil')
+const angel = document.querySelector('.angel')
+
+devil.addEventListener('click', () => {
+    if(angel.classList.contains('open')) {
+        angel.classList.add('active');
+        devil.classList.remove('active');
+    }
+})
+
+angel.addEventListener('click', () => {
+    if(devil.classList.contains('closed')) {
+        devil.classList.add('active');
+        angel.classList.remove('active');
+    }
+})
+
 
 const computerChoiceDisplay = document.getElementById('computer-choice');
 const userChoiceDisplay = document.getElementById('user-choice');
